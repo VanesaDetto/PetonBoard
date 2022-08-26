@@ -17,6 +17,7 @@ const schema = new Schema(
     origin: { type: String, required: true },
     destiny: { type: String, required: true },
     date: { type: String, required: true },
+    services:{type: Boolean, required: false}
   },
 
   {

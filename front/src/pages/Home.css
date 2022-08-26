@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+a{
+    transition: all 0.5s ease-in-out;
+    
+}
+
+a:hover {
+    color: azure;
+}

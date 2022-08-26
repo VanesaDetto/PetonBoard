@@ -1,0 +1,39 @@
+header {
+    height: 15vh;
+    border: 1px rgb(76, 8, 8) solid;
+    height: 20%;
+
+}
+
+header nav {
+    height: 15vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+header nav h2 {
+    padding: 0 2rem;
+}
+
+header nav ul {
+    display: flex;
+    color: #082462;
+    gap: 5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    background-color: #082462;
+    color: #fffbfb;
+}
+
+header nav ul a{
+    transition: all 0.5s ease-in-out;
+    
+}
+
+header nav ul a:hover {
+    color: azure;
+}
