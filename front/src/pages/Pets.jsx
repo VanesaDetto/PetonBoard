@@ -1,32 +1,49 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import PetCard from "../components/PetCard";
-import {API} from "../services/API"
-import "./Pets.css"
+import SearchBar from "../components/SearchBar";
+import { API } from "../services/API";
+import "./Pets.css";
 
 const Pets = () => {
-    const [allPets, setAllPets] = useState([]);
+  const [allPets, setAllPets] = useState([]);
+  const [filterWord, setFilterWord] = useState("");
 
-    const getAllPetusers = async () => {
-        API.get("/petuser/getall").then((resPetuser) => {
-            setAllPets(resPetuser.data.petuser);
-        });
-    };
+  const filteredPets = allPets.filter(
+    (Pet) =>
+      Pet.petname.toLowerCase().includes(filterWord) ||
+      Pet.specie.toLowerCase().includes(filterWord) ||
+      Pet.origin.toLowerCase().includes(filterWord) ||
+      Pet.destiny.toLowerCase().includes(filterWord)
+  );
 
-    useEffect(() => {
-        getAllPetusers();
-    }, []);
+  const getAllPetusers = async () => {
+    API.get("/petuser/getall").then((resPetuser) => {
+      setAllPets(resPetuser.data.petuser);
+    });
+  };
 
-    return (
+  useEffect(() => {
+    getAllPetusers();
+  }, []);
+
+  return (
     <section className="pets">
-    <h2>Our pets</h2>
-    <div className="galeria">
+      <h2>Our pets</h2>
+      <SearchBar setFilterWord={setFilterWord} />
+      <div className="galeria">
         {allPets.length ? (
-        allPets.map((pet) => <p><PetCard pet={pet} key={pet._id}/></p>)
-    ) : (
-    <p>Loading pets...</p>
-    )}
-    </div>
-    </section>)
-}
+          filteredPets.map((pet) => (
+            <p>
+              <PetCard pet={pet} key={pet._id} />
+            </p>
+          ))
+        ) : (
+          <p>Loading pets...</p>
+        )}
+      </div>
+      {!filteredPets.length ? <p>Pets not found</p> : null}
+    </section>
+  );
+};
 
-export default Pets
+export default Pets;
