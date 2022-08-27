@@ -1,39 +1,48 @@
 header {
-    height: 15vh;
-    border: 1px rgb(76, 8, 8) solid;
-    height: 20%;
-
+  height: 15vh;
+  border: 1px rgb(76, 8, 8) solid;
+  height: 20%;
 }
 
 header nav {
-    height: 15vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 3rem;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
 }
 
 header nav h2 {
-    padding: 0 2rem;
+  padding: 0 2rem;
 }
 
 header nav ul {
-    display: flex;
-    color: #082462;
-    gap: 5rem;
-    text-transform: uppercase;
+  display: flex;
+  color: #082462;
+  gap: 5rem;
+  text-transform: uppercase;
 }
 
 h2 {
-    background-color: #082462;
-    color: #fffbfb;
+  background-color: #082462;
+  color: #fffbfb;
 }
 
-header nav ul a{
-    transition: all 0.5s ease-in-out;
-    
+header nav ul a {
+  transition: all 0.5s ease-in-out;
 }
 
 header nav ul a:hover {
-    color: azure;
+  color: azure;
+}
+
+header .control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .control img {
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fffbee;
 }

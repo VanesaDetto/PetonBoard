@@ -1,28 +1,58 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    ;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
- text-decoration: none;
- color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #fffbfb;
-    color: #1478ab;
-    
+  background-color: #fffbfb;
+  color: #1478ab;
 }
-section{
-    min-height: 75vh;
+section {
+  min-height: 75vh;
+}
+
+button {
+  border: none;
+  background-color: red;
+  border-radius: 0, 2rem;
+  padding: 0, 3rem 1rem;
+}
+
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #fe4107;
+  padding: 2px 0;
+  border-top: 2px solid #fe4107;
+  border-bottom: 2px solid #fe4107;
+}
+
+strong {
+  color: #fe4107;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 0.3rem 1rem;
+  background-color: #fe4107;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  color: #fffbee;
 }

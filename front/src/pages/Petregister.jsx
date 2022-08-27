@@ -25,7 +25,7 @@ const Petregister = () => {
     <section className="register">
       <h2>Please Register</h2>
       <form onSubmit={handleSubmit(formSubmit)}>
-        <label htmlFor="username">Petusername</label>
+        <label htmlFor="username">Petsusername</label>
         <input
           type="text"
           id="username"

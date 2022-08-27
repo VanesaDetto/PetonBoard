@@ -53,7 +53,7 @@ const register = async (req, res, next) => {
 const login = async (req, res, next) => {
   try {
     const petuserInDb = await Petuser.findOne({
-      petusername: req.body.petusername,
+      username: req.body.username,
     });
     if (!petuserInDb) return next(setError(404, "User not found"));
 

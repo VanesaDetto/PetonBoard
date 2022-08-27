@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { JwtContextrovider } from "./contexts/jwtContext";
+import { JwtContextProvider } from "./contexts/jwtContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Pets from "./pages/Pets";
@@ -12,7 +12,7 @@ import Editpet from "./pages/Editpet";
 
 function App() {
   return (
-    <JwtContextrovider>
+    <JwtContextProvider>
       <div>
         <Router>
           <Header />
@@ -30,7 +30,7 @@ function App() {
           <Footer />
         </Router>
       </div>
-    </JwtContextrovider>
+    </JwtContextProvider>
   );
 }
 
