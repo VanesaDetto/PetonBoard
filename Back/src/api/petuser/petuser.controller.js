@@ -33,11 +33,8 @@ const register = async (req, res, next) => {
   try {
     const newPetuser = new Petuser(req.body);
     const petusernameExist = await Petuser.findOne({
-      petusername: newPetuser.petusername,
+      username: newPetuser.username,
     });
-    if (petusernameExist) {
-      return next(setError(409, "User already exists"));
-    }
     if (req.file) {
       newPetuser.imagen = req.file.path;
     }

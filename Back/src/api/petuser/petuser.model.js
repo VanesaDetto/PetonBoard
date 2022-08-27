@@ -6,18 +6,18 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
   {
-    petusername: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    petname: { type: String, required: true },
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: false },
+    petname: { type: String, required: false },
     imagen: { type: String, required: false },
-    specie: { type: String, enum: PET, required: true },
-    breed: { type: String, required: true },
-    weight: { type: Number, required: true },
+    specie: { type: String, enum: PET, required: false },
+    breed: { type: String, required: false },
+    weight: { type: Number, required: false },
     owner: { type: String, required: false },
-    origin: { type: String, required: true },
-    destiny: { type: String, required: true },
-    date: { type: String, required: true },
-    services:{type: Boolean, required: false}
+    origin: { type: String, required: false },
+    destiny: { type: String, required: false },
+    date: { type: String, required: false },
+    services: { type: Boolean, required: false },
   },
 
   {
