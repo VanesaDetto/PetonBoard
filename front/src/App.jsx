@@ -1,4 +1,5 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { JwtContextrovider } from "./contexts/jwtContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Pets from "./pages/Pets";
@@ -9,33 +10,28 @@ import Petregister from "./pages/Petregister";
 import Newpet from "./pages/Newpet";
 import Editpet from "./pages/Editpet";
 
-
-
 function App() {
-
-
   return (
-    <div>
-      <Router>
-    <Header/>
+    <JwtContextrovider>
+      <div>
+        <Router>
+          <Header />
 
-    <Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pets" element={<Pets />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/petregister" element={<Petregister />} />
+            <Route path="/newpet" element={<Newpet />} />
+            <Route path="/editpet" element={<Editpet />} />
+          </Routes>
 
-      <Route path="/" element={<Home/>}/>
-      <Route path="/pets" element={<Pets/>}/>
-      <Route path="/profile" element={<Profile/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/petregister" element={<Petregister/>}/>
-      <Route path="/newpet" element={<Newpet/>}/>
-      <Route path="/editpet" element={<Editpet/>}/>
-
-
-    </Routes>
-
-    <Footer/>
-      </Router>
-    </div>
-  )
+          <Footer />
+        </Router>
+      </div>
+    </JwtContextrovider>
+  );
 }
 
-export default App
+export default App;
