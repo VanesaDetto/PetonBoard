@@ -12,7 +12,7 @@ const {
 } = require("./petuser.controller");
 
 PetuserRoutes.post("/login", login);
-PetuserRoutes.post("/register", upload.single("imagen"), register);
+PetuserRoutes.post("/register", upload.single("avatar"), register);
 PetuserRoutes.get("/getall", getAllPetusers);
 PetuserRoutes.get("/:id", [authorize], petuserByID);
 PetuserRoutes.patch("/:id", [authorize], update);

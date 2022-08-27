@@ -12,6 +12,7 @@ const Petregister = () => {
     const formData = new FormData();
     formData.append("username", data.username);
     formData.append("password", data.password);
+    formData.append("avatar", data.avatar[0]);
     API.post("/petuser/register", formData).then((res) => {
       if (res) {
         navigate("/login");
@@ -38,6 +39,8 @@ const Petregister = () => {
           name="password"
           {...register("password")}
         />
+        <label htmlFor="avatar">Avatar</label>
+        <input type="file" id="avatar" name="avatar" {...register("avatar")} />
         <button type="submit">Register</button>
       </form>
     </section>

@@ -8,8 +8,8 @@ const schema = new Schema(
   {
     username: { type: String, required: true, unique: true },
     password: { type: String, required: false },
+    avatar: { type: String, required: false },
     petname: { type: String, required: false },
-    imagen: { type: String, required: false },
     specie: { type: String, enum: PET, required: false },
     breed: { type: String, required: false },
     weight: { type: Number, required: false },
