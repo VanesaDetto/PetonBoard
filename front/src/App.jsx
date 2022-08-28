@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Petregister from "./pages/Petregister";
 import Newpet from "./pages/Newpet";
 import Editpet from "./pages/Editpet";
+import RequireAuth from "./components/RequiredAuth";
 
 function App() {
   return (

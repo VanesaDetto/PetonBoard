@@ -14,9 +14,9 @@ const Login = () => {
   const formSubmit = (formData) => {
     API.post("/petuser/login", formData).then((res) => {
       localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.userInDb));
+      localStorage.setItem("user", JSON.stringify(res.data.petuserInDb));
       setJwt(res.data.token);
-      setUser(res.data.userInDb);
+      setUser(res.data.petuserInDb);
       if (res.data.token) {
         navigate("/");
         Swal.fire("Bienvenido a la web, ya puedes crear y editar tu mascota");
