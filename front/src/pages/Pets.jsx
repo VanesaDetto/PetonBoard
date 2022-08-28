@@ -9,11 +9,11 @@ const Pets = () => {
   const [filterWord, setFilterWord] = useState("");
 
   const filteredPets = allPets.filter(
-    (Pet) =>
-      Pet.petname.toLowerCase().includes(filterWord) ||
-      Pet.specie.toLowerCase().includes(filterWord) ||
-      Pet.origin.toLowerCase().includes(filterWord) ||
-      Pet.destiny.toLowerCase().includes(filterWord)
+    (petuser) =>
+      petuser.petname.toLowerCase().includes(filterWord) ||
+      petuser.specie.toLowerCase().includes(filterWord) ||
+      petuser.origin.toLowerCase().includes(filterWord) ||
+      petuser.destiny.toLowerCase().includes(filterWord)
   );
 
   const getAllPetusers = async () => {
@@ -32,11 +32,7 @@ const Pets = () => {
       <SearchBar setFilterWord={setFilterWord} />
       <div className="galeria">
         {allPets.length ? (
-          filteredPets.map((pet) => (
-            <p>
-              <PetCard pet={pet} key={pet._id} />
-            </p>
-          ))
+          filteredPets.map((pet) => <PetCard petuser={pet} key={pet._id} />)
         ) : (
           <p>Loading pets...</p>
         )}

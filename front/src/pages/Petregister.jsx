@@ -13,6 +13,16 @@ const Petregister = () => {
     formData.append("username", data.username);
     formData.append("password", data.password);
     formData.append("avatar", data.avatar[0]);
+    formData.append("petname", data.petname);
+    formData.append("specie", data.especie);
+    formData.append("breed", data.breed);
+    formData.append("weight", data.weight);
+    formData.append("owner", data.owner);
+    formData.append("origin", data.origin);
+    formData.append("destiny", data.destiny);
+    formData.append("date", data.date);
+    formData.append("services", data.services);
+
     API.post("/petuser/register", formData).then((res) => {
       if (res) {
         navigate("/login");
@@ -39,8 +49,60 @@ const Petregister = () => {
           name="password"
           {...register("password")}
         />
+        <label htmlFor="owner">Owner</label>
+        <input type="text" name="owner" id="owner" {...register("owner")} />
+        <label htmlFor="petname">PetName</label>
+
+        <input
+          type="text"
+          name="petname"
+          id="petname"
+          {...register("petname")}
+        />
+        <label htmlFor="specie">Specie</label>
+        <input
+          type="text"
+          name="specie"
+          id="especie"
+          {...register("especie")}
+        />
+        <label htmlFor="breed">Breed</label>
+        <input type="text" name="breed" id="breed" {...register("breed")} />
+        <label htmlFor="weight">Weight</label>
+        <input
+          type="number"
+          name="weight"
+          id="weight"
+          {...register("weight")}
+        />
+
+        <label htmlFor="origin">origin</label>
+        <input type="text" name="origin" id="origin" {...register("origin")} />
+        <label htmlFor="destiny">destiny</label>
+        <input
+          type="text"
+          name="destiny"
+          id="destiny"
+          {...register("destiny")}
+        />
+        <label htmlFor="date">date</label>
+        <input
+          type="date"
+          min="1980-01-01"
+          max="2030-12-31"
+          id=""
+          {...register("date")}
+        />
+        <label htmlFor="Servicies">Servicies</label>
+        <input
+          type="checkbox"
+          id="services"
+          name="services"
+          {...register("services")}
+        />
         <label htmlFor="avatar">Avatar</label>
         <input type="file" id="avatar" name="avatar" {...register("avatar")} />
+
         <button type="submit">Register</button>
       </form>
     </section>

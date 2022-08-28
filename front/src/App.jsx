@@ -7,7 +7,6 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Petregister from "./pages/Petregister";
-import Newpet from "./pages/Newpet";
 import Editpet from "./pages/Editpet";
 import RequireAuth from "./components/RequiredAuth";
 
@@ -24,7 +23,6 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/petregister" element={<Petregister />} />
-            <Route path="/newpet" element={<Newpet />} />
             <Route path="/editpet" element={<Editpet />} />
           </Routes>
 

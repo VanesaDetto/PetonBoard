@@ -21,9 +21,6 @@ const Header = () => {
           {user ? (
             <>
               <li>
-                <Link to="/Newpet">CREATE Pets</Link>
-              </li>
-              <li>
                 <Link to="/Profile">PROFILE</Link>
               </li>
             </>
