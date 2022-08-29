@@ -10,6 +10,7 @@ import Petregister from "./pages/Petregister";
 import Editpet from "./pages/Editpet";
 import RequireAuth from "./components/RequiredAuth";
 
+
 function App() {
   return (
     <JwtContextProvider>
@@ -28,6 +29,7 @@ function App() {
                 </RequireAuth>
               }
             />
+
             <Route path="/login" element={<Login />} />
             <Route path="/petregister" element={<Petregister />} />
             <Route

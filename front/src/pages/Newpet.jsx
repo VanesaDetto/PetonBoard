@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { API } from "../services/API";
-import "./Petregister.css";
+import "./Newpet.css";
 import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 
@@ -10,9 +10,9 @@ const Newpet = () => {
 
   const formSubmit = (data) => {
     const formData = new FormData();
-    formData.append("username", data.username);
-    formData.append("password", data.password);
-    formData.append("avatar", data.avatar[0]);
+    
+    
+    formData.append("image", data.image[0]);
     formData.append("petname", data.petname);
     formData.append("specie", data.especie);
     formData.append("breed", data.breed);
@@ -23,16 +23,16 @@ const Newpet = () => {
     formData.append("date", data.date);
     formData.append("services", data.services);
 
-    API.post("/petuser/register", formData).then((res) => {
+    API.post("/petuser/create", formData).then((res) => {
       if (res) {
-        navigate("/login");
+        navigate("/profile");
         Swal.fire("Bienvenido, ya te puedes loguear con tus datos");
       }
     });
   };
 
   return (
-    <section className="register">
+    <section className="newpet">
       <h2>Create pet</h2>
       <form onSubmit={handleSubmit(formSubmit)}>
         <label htmlFor="petname">Petname</label>
