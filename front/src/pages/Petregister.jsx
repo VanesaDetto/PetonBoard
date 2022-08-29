@@ -94,20 +94,11 @@ const Petregister = () => {
           {...register("date")}
         />
         <div>
-          <label htmlFor="Services">Cabina</label>
-        <input
-          type="checkbox"
-          id="services"
-          name="services"
-          {...register("services")}
-        />
-         <label htmlFor="Services">Bodega</label>
-        <input
-          type="checkbox"
-          id="services"
-          name="services"
-          {...register("services")}
-        /></div>
+          <label htmlFor="Services">Servicios</label>
+          <input name="services" type="radio" value="true" /> True
+<input name="services" type="radio" value="false" /> False
+         
+        </div>
         <label htmlFor="avatar">Avatar</label>
         <input type="file" id="avatar" name="avatar" {...register("avatar")} />
 

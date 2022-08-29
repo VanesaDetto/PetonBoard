@@ -7,14 +7,26 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Petregister from "./pages/Petregister";
-import Editpet from "./pages/Editpet";
 import RequireAuth from "./components/RequiredAuth";
+import useLocalStorage from 'use-local-storage';
+import './App.css';
+
 
 
 function App() {
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+  const switchTheme = () => {
+  const newTheme = theme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+  }
   return (
+    
     <JwtContextProvider>
-      <div>
+
+      <div className="app" data-theme={theme}>
+      <button onClick={switchTheme}>Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme</button>
         <Router>
           <Header />
 
@@ -31,14 +43,7 @@ function App() {
             />
 
             <Route path="/login" element={<Login />} />
-            <Route path="/petregister" element={<Petregister />} />
-            <Route
-              path="/editpet"
-              element={
-                <RequireAuth>
-                  <Editpet />
-                </RequireAuth>
-              }
+            <Route path="/petregister" element={<Petregister />} 
             />
           </Routes>
 

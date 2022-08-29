@@ -1,4 +1,5 @@
 import "./Header.css";
+import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { JwtContext } from "../contexts/jwtContext";
@@ -6,6 +7,8 @@ import { JwtContext } from "../contexts/jwtContext";
 const Header = () => {
   const { user, logout } = useContext(JwtContext);
   let navigate = useNavigate();
+
+
 
   return (
     <header>
@@ -49,6 +52,7 @@ const Header = () => {
           )}
         </div>
       </nav>
+      
     </header>
   );
 };

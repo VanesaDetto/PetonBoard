@@ -24,7 +24,7 @@ header nav ul {
 }
 
 h2 {
-  background-color: #082462;
+  background-color: var(--background);
   color: #fffbfb;
 }
 

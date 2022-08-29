@@ -56,3 +56,20 @@ button {
   font-weight: bold;
   color: #fffbee;
 }
+
+
+
+[data-theme='dark'] {
+  --background: black;
+  --text-primary: white;
+  --text-secondary: grey;
+  --accent: darkred;
+}
+
+
+[data-theme='light'] {
+  --background: rgb(112, 77, 77);
+  --text-primary: white;
+  --text-secondary: rgb(130, 112, 112);
+  --accent: rgb(67, 64, 64);
+}
