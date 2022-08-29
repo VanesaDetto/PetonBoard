@@ -6,7 +6,7 @@ const { setError } = require("../../helpers/errors");
 
 const getAllPetusers = async (req, res, next) => {
   try {
-    const petuser = await Petuser.find().sort({ createdAt: "desc" });
+    const petuser = await Petuser.find();
     return res.status(200).json({
       message: "All Petusers",
       petuser,

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const { PET } = require("../../helpers/constants/pet");
+const { SERVICES } = require ("../../helpers/constants/services")
 
 const Schema = mongoose.Schema;
 
@@ -17,7 +18,8 @@ const schema = new Schema(
     origin: { type: String, required: false },
     destiny: { type: String, required: false },
     date: { type: String, required: false },
-    services: { type: Boolean, required: false },
+    services: { type: String, enum: SERVICES, required: false  },
+    image: { type: String, required: false },
   },
 
   {

@@ -1,3 +1,3 @@
-const PET = ["gato", "perro", "conejo", "pajaro"];
+const PET = ["cat", "dog", "rabbit", "bird"];
 
 module.exports = PET;
