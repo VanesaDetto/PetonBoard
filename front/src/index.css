@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  background-color: #fffbfb;
-  color: #1478ab;
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 section {
   min-height: 75vh;
@@ -51,25 +51,36 @@ button {
   outline: none;
   border: none;
   padding: 0.3rem 1rem;
-  background-color: #fe4107;
+  background-color: #585655;
   border-radius: 0.2rem;
   font-weight: bold;
   color: #fffbee;
 }
 
 
+.mode {
+  background-color: var(--background);
 
-[data-theme='dark'] {
-  --background: black;
-  --text-primary: white;
-  --text-secondary: grey;
-  --accent: darkred;
+  padding: 6px;
+  width: 100%;
+  border-top: #8855a1 solid 1px;
+  border-bottom: #8855a1 solid 1px;
+} 
+
+
+[data-theme='☀️'] {
+  --background: #0e1729;
+  --backgrounddos: #2a3f69;
+  --backgroundtres: #8855a1;
+  --text-primary: #c28dba;
+  --text-secondary: #c28dba;
+  --accent: #8855a1;
 }
 
 
-[data-theme='light'] {
-  --background: rgb(112, 77, 77);
-  --text-primary: white;
-  --text-secondary: rgb(130, 112, 112);
-  --accent: rgb(67, 64, 64);
+[data-theme='🌚'] {
+  --background: #e5e0e8;
+  --text-primary: #29327a;
+  --text-secondary: #29327a;
+  --accent: rgb(30, 87, 87);
 }

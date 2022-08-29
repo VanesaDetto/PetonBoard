@@ -1,5 +1,4 @@
 import "./Header.css";
-import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { JwtContext } from "../contexts/jwtContext";
@@ -13,7 +12,10 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <h2>Pet on Board</h2>
+        <div className="logo">
+        <img src="https://premierpettravel.com/wp-content/uploads/2019/11/Logo.png" alt="logo"  />
+        </div>
+    
         <ul>
           <li>
             <Link to="/">Home</Link>

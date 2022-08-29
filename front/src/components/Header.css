@@ -1,7 +1,11 @@
 header {
   height: 15vh;
-  border: 1px rgb(76, 8, 8) solid;
-  height: 20%;
+
+
+}
+
+header nav img {
+  width: 27%;
 }
 
 header nav {
@@ -9,24 +13,32 @@ header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.logo {
+  
+  justify-content: center;
+  display: flex;
+}
 header nav h2 {
   padding: 0 2rem;
 }
 
 header nav ul {
   display: flex;
-  color: #082462;
+  
   gap: 5rem;
   text-transform: uppercase;
 }
 
 h2 {
   background-color: var(--background);
-  color: #fffbfb;
+  color: var(--text-primary);
 }
+
 
 header nav ul a {
   transition: all 0.5s ease-in-out;

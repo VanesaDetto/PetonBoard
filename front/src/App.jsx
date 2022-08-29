@@ -15,10 +15,10 @@ import './App.css';
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? '🌚' : '☀️');
 
   const switchTheme = () => {
-  const newTheme = theme === 'light' ? 'dark' : 'light';
+  const newTheme = theme === '☀️' ? '🌚' : '☀️';
   setTheme(newTheme);
   }
   return (
@@ -26,10 +26,10 @@ function App() {
     <JwtContextProvider>
 
       <div className="app" data-theme={theme}>
-      <button onClick={switchTheme}>Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme</button>
+      
         <Router>
           <Header />
-
+          <button className="mode" onClick={switchTheme}>Mode {theme === '☀️' ? '🌚' : '☀️'} </button>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pets" element={<Pets />} />

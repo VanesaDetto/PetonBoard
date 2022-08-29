@@ -6,7 +6,8 @@
   gap: 0.4rem;
   padding: 0.8rem;
   text-align: left;
-  background-color: #97a0c8;
+  background-color: var(--backgroundtres);
+  color: var(--text-primary);
   border-radius: 0.5rem;
 }
 

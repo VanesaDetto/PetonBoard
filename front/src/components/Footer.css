@@ -2,6 +2,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px rgb(76, 8, 8);
+
     height: 10vh;
+    background-color: var(--background);
+    color: var(--text-primary);
 }
