@@ -14,7 +14,7 @@ const Petregister = () => {
     formData.append("password", data.password);
     formData.append("avatar", data.avatar[0]);
     formData.append("petname", data.petname);
-    formData.append("specie", data.especie);
+    formData.append("specie", data.specie);
     formData.append("breed", data.breed);
     formData.append("weight", data.weight);
     formData.append("owner", data.owner);
@@ -60,12 +60,14 @@ const Petregister = () => {
           {...register("petname")}
         />
         <label htmlFor="specie">Specie</label>
-        <input
-          type="text"
-          name="specie"
-          id="especie"
-          {...register("especie")}
-        />
+        <select {...register("specie")}>
+        <option value="">Select...</option>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="bird">Bird</option>
+        </select>
+
         <label htmlFor="breed">Breed</label>
         <input type="text" name="breed" id="breed" {...register("breed")} />
         <label htmlFor="weight">Weight</label>
@@ -93,12 +95,15 @@ const Petregister = () => {
           id=""
           {...register("date")}
         />
-        <div>
-          <label htmlFor="Services">Servicios</label>
-          <input name="services" type="radio" value="true" /> True
-<input name="services" type="radio" value="false" /> False
+        
+        <label htmlFor="Services">Services</label>
+        <select {...register("services")}>
+        <option value="">Select...</option>
+        <option value="hold">Hold</option>
+        <option value="cabin">Cabin</option>
+        </select>
          
-        </div>
+        
         <label htmlFor="avatar">Avatar</label>
         <input type="file" id="avatar" name="avatar" {...register("avatar")} />
 

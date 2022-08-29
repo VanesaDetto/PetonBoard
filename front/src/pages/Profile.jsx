@@ -94,14 +94,14 @@ const Profile = () => {
 
         />
         <label htmlFor="specie">Specie</label>
-        <input
-          type="text"
-          name="specie"
-          id="especie"
-          {...register("especie")}
-          defaultValue={defaultValues.specie}
+        <select {...register("specie")}defaultValue={defaultValues.specie}>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="bird">Bird</option>
+        </select>
 
-        />
+
         <label htmlFor="breed">Breed</label>
         <input type="text" name="breed" id="breed" {...register("breed")} defaultValue={defaultValues.breed}/>
         <label htmlFor="weight">Weight</label>
@@ -136,21 +136,14 @@ const Profile = () => {
           defaultValue={defaultValues.date}
 
         />
-        <div>
-          <label htmlFor="Services">Cabina</label>
-        <input
-          type="checkbox"
-          id="services"
-          name="services"
-          {...register("services")}
-        />
-         <label htmlFor="Services">Bodega</label>
-        <input
-          type="checkbox"
-          id="services"
-          name="services"
-          {...register("services")}
-        /></div>
+        <label htmlFor="services">Services</label>
+        <select {...register("services")}defaultValue={defaultValues.services}>
+        <option value="">Select...</option>
+        <option value="hold">Hold</option>
+        <option value="cabin">Cabin</option>
+        </select>
+         
+        
         <input type="file" id="avatar" name="avatar" {...register("avatar")} />
         {user ? (
       <>
