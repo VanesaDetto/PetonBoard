@@ -3,11 +3,58 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
 }
 
 .register form {
+  border: solid 1px var(--text-primary);
+  max-width: 700px;
+  width: 100%;
+  color: aliceblue;
+  padding: 25px 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  background-color: var(--backgrounddos);
+}
+
+.box {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 10px;
+  gap: 0.5rem;
+}
+.box input {
+  outline-style: none;
+  border-radius: 5px;
+  border: solid 1px var(--text-primary);
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  color: #ff6892;
+  margin: 10px;
+}
+
+.Boton {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #ff6892;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+  font-weight: bolder;
 }

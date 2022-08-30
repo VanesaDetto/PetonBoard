@@ -13,13 +13,15 @@ const Login = () => {
 
   const formSubmit = (formData) => {
     API.post("/petuser/login", formData).then((res) => {
+      console.log(res);
+
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.petuserInDb));
       setJwt(res.data.token);
       setUser(res.data.petuserInDb);
       if (res.data.token) {
         navigate("/");
-        Swal.fire("Bienvenido a la web, ya puedes crear y editar tu mascota");
+        Swal.fire("Wellcome to the Web!");
       }
     });
   };
@@ -27,22 +29,29 @@ const Login = () => {
   return (
     <section className="login">
       <h2>Please log in:</h2>
+
       <form onSubmit={handleSubmit(formSubmit)}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          {...register("username")}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          {...register("password")}
-        />
-        <button type="submit">Login</button>
+        <div className="box">
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            {...register("username")}
+          />
+        </div>
+        <div className="box">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            {...register("password")}
+          />
+        </div>
+        <button className="Boton" type="submit">
+          Login
+        </button>
       </form>
     </section>
   );

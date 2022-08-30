@@ -34,79 +34,147 @@ const Petregister = () => {
   return (
     <section className="register">
       <h2>Please Register</h2>
+
       <form onSubmit={handleSubmit(formSubmit)}>
-        <label htmlFor="username">Petsusername</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          {...register("username")}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          {...register("password")}
-        />
-        <label htmlFor="owner">Owner</label>
-        <input type="text" name="owner" id="owner" {...register("owner")} />
-        <label htmlFor="petname">PetName</label>
+        <div className="box">
+          <label htmlFor="username">Username</label>
+          <input
+            placeholder="E.g: John"
+            required
+            type="text"
+            id="username"
+            name="username"
+            {...register("username")}
+          />
+        </div>
 
-        <input
-          type="text"
-          name="petname"
-          id="petname"
-          {...register("petname")}
-        />
-        <label htmlFor="specie">Specie</label>
-        <select {...register("specie")}>
-          <option value="">Select...</option>
-          <option value="cat">Cat</option>
-          <option value="dog">Dog</option>
-          <option value="rabbit">Rabbit</option>
-          <option value="bird">Bird</option>
-        </select>
+        <div className="box">
+          <label htmlFor="password">Password</label>
+          <input
+            placeholder="E.g: John.123!"
+            required
+            type="password"
+            id="password"
+            name="password"
+            {...register("password")}
+          />
+        </div>
 
-        <label htmlFor="breed">Breed</label>
-        <input type="text" name="breed" id="breed" {...register("breed")} />
-        <label htmlFor="weight">Weight</label>
-        <input
-          type="number"
-          name="weight"
-          id="weight"
-          {...register("weight")}
-        />
+        <div className="box">
+          <label htmlFor="owner">Owner</label>
+          <input
+            placeholder="Name"
+            requiredtype="text"
+            name="owner"
+            id="owner"
+            {...register("owner")}
+          />
+        </div>
 
-        <label htmlFor="origin">origin</label>
-        <input type="text" name="origin" id="origin" {...register("origin")} />
-        <label htmlFor="destiny">destiny</label>
-        <input
-          type="text"
-          name="destiny"
-          id="destiny"
-          {...register("destiny")}
-        />
-        <label htmlFor="date">date</label>
-        <input
-          type="date"
-          min="1980-01-01"
-          max="2030-12-31"
-          id=""
-          {...register("date")}
-        />
+        <div className="box">
+          <label htmlFor="petname">Name of Pet</label>
 
-        <label htmlFor="Services">Services</label>
-        <select {...register("services")}>
-          <option value="">Select...</option>
-          <option value="hold">Hold</option>
-          <option value="cabin">Cabin</option>
-        </select>
+          <input
+            placeholder="E.g: Boby"
+            required
+            type="text"
+            name="petname"
+            id="petname"
+            {...register("petname")}
+          />
+        </div>
 
-        <label htmlFor="avatar">Avatar</label>
-        <input type="file" id="avatar" name="avatar" {...register("avatar")} />
+        <div className="box">
+          <label htmlFor="specie">Specie</label>
+          <select {...register("specie")}>
+            <option value="">Select...</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="bird">Bird</option>
+          </select>
+        </div>
 
-        <button type="submit">Register</button>
+        <div className="box">
+          <label htmlFor="breed">Breed</label>
+          <input
+            placeholder="E.g: Boxer"
+            requiredtype="text"
+            name="breed"
+            id="breed"
+            {...register("breed")}
+          />
+        </div>
+
+        <div className="box">
+          <label htmlFor="weight">Weight</label>
+
+          <input
+            placeholder="E.g: 15"
+            required
+            type="number"
+            name="weight"
+            id="weight"
+            {...register("weight")}
+          />
+        </div>
+
+        <div className="box">
+          <label htmlFor="origin">Origin</label>
+          <input
+            placeholder="E.g: Polonia"
+            required
+            type="text"
+            name="origin"
+            id="origin"
+            {...register("origin")}
+          />
+        </div>
+
+        <div className="box">
+          <label htmlFor="destiny">Destiny</label>
+          <input
+            placeholder="E.g: Alemania"
+            required
+            type="text"
+            name="destiny"
+            id="destiny"
+            {...register("destiny")}
+          />
+        </div>
+
+        <div className="box">
+          <label htmlFor="date">Date of your trip</label>
+          <input
+            type="date"
+            min="1980-01-01"
+            max="2030-12-31"
+            id=""
+            {...register("date")}
+          />
+        </div>
+
+        <div className="box">
+          <label htmlFor="Services">Travel options</label>
+          <select {...register("services")}>
+            <option value="">Select...</option>
+            <option value="hold">Hold</option>
+            <option value="cabin">Cabin</option>
+          </select>
+        </div>
+
+        <div className="box">
+          <label htmlFor="avatar">Avatar</label>
+          <input
+            type="file"
+            id="avatar"
+            name="avatar"
+            {...register("avatar")}
+          />
+        </div>
+        <button className="Boton" type="submit">
+          Register
+        </button>
       </form>
     </section>
   );
