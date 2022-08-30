@@ -67,127 +67,137 @@ const Profile = () => {
   return (
     <section className="profile">
       <h2>Profile</h2>
-
-      <form onSubmit={handleSubmit(formSubmit)}>
+      <div className="ficha">
         <img src={user.avatar} alt="User avatar" />
-        <div className="box">
-          <label htmlFor="owner">Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            {...register("username")}
-            defaultValue={defaultValues.username}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="owner">Owner</label>
-          <input
-            type="text"
-            name="owner"
-            id="owner"
-            {...register("owner")}
-            defaultValue={defaultValues.owner}
-          />
-        </div>
 
-        <div className="box">
-          <label htmlFor="petname">Name of Pet</label>
-          <input
-            type="text"
-            name="petname"
-            id="petname"
-            {...register("petname")}
-            defaultValue={defaultValues.petname}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="specie">Specie</label>
-          <select {...register("specie")} defaultValue={defaultValues.specie}>
-            <option value="cat">Cat</option>
-            <option value="dog">Dog</option>
-            <option value="rabbit">Rabbit</option>
-            <option value="bird">Bird</option>
-          </select>
-        </div>
-        <div className="box">
-          <label htmlFor="breed">Breed</label>
-          <input
-            type="text"
-            name="breed"
-            id="breed"
-            {...register("breed")}
-            defaultValue={defaultValues.breed}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="weight">Weight</label>
-          <input
-            type="number"
-            name="weight"
-            id="weight"
-            {...register("weight")}
-            defaultValue={defaultValues.weight}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="origin">Origin</label>
-          <input
-            type="text"
-            name="origin"
-            id="origin"
-            {...register("origin")}
-            defaultValue={defaultValues.origin}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="destiny">Destiny</label>
-          <input
-            type="text"
-            name="destiny"
-            id="destiny"
-            {...register("destiny")}
-            defaultValue={defaultValues.destiny}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="date">Date of your trip</label>
-          <input
-            type="date"
-            min="1980-01-01"
-            max="2030-12-31"
-            id=""
-            {...register("date")}
-            defaultValue={defaultValues.date}
-          />
-        </div>
-        <div className="box">
-          <label htmlFor="services">Travel options</label>
-          <select
-            {...register("services")}
-            defaultValue={defaultValues.services}
-          >
-            <option value="">Select...</option>
-            <option value="hold">Hold</option>
-            <option value="cabin">Cabin</option>
-          </select>
+        <form onSubmit={handleSubmit(formSubmit)}>
+          <div className="boxtres">
+            <label htmlFor="owner">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              {...register("username")}
+              defaultValue={defaultValues.username}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="owner">Owner</label>
+            <input
+              type="text"
+              name="owner"
+              id="owner"
+              {...register("owner")}
+              defaultValue={defaultValues.owner}
+            />
+          </div>
 
-          <input
-            type="file"
-            id="avatar"
-            name="avatar"
-            {...register("avatar")}
-          />
+          <div className="boxtres">
+            <label htmlFor="petname">Name of Pet</label>
+            <input
+              type="text"
+              name="petname"
+              id="petname"
+              {...register("petname")}
+              defaultValue={defaultValues.petname}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="specie">Specie</label>
+            <select {...register("specie")} defaultValue={defaultValues.specie}>
+              <option value="cat">Cat</option>
+              <option value="dog">Dog</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="bird">Bird</option>
+            </select>
+          </div>
+          <div className="boxtres">
+            <label htmlFor="breed">Breed</label>
+            <input
+              type="text"
+              name="breed"
+              id="breed"
+              {...register("breed")}
+              defaultValue={defaultValues.breed}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="weight">Weight</label>
+            <input
+              type="number"
+              name="weight"
+              id="weight"
+              {...register("weight")}
+              defaultValue={defaultValues.weight}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="origin">Origin</label>
+            <input
+              type="text"
+              name="origin"
+              id="origin"
+              {...register("origin")}
+              defaultValue={defaultValues.origin}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="destiny">Destiny</label>
+            <input
+              type="text"
+              name="destiny"
+              id="destiny"
+              {...register("destiny")}
+              defaultValue={defaultValues.destiny}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="date">Date of your trip</label>
+            <input
+              type="date"
+              min="1980-01-01"
+              max="2030-12-31"
+              id=""
+              {...register("date")}
+              defaultValue={defaultValues.date}
+            />
+          </div>
+          <div className="boxtres">
+            <label htmlFor="services">Travel options</label>
+            <select
+              {...register("services")}
+              defaultValue={defaultValues.services}
+            >
+              <option value="">Select...</option>
+              <option value="hold">Hold</option>
+              <option value="cabin">Cabin</option>
+            </select>
+          </div>
+          <div className="boxtres">
+            <label htmlFor="avatar">Avatar</label>
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              {...register("avatar")}
+            />
+          </div>
           {user ? (
             <>
-              <button type="submit">Edit</button>
-              <button type="button" onClick={() => deletePet(user)}>
+              <button className="Botontres" type="submit">
+                Edit
+              </button>
+              <button
+                className="Botontres"
+                type="button"
+                onClick={() => deletePet(user)}
+              >
                 Delete
               </button>
             </>
           ) : null}
-        </div>
-      </form>
+        </form>
+      </div>
     </section>
   );
 };

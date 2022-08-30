@@ -59,3 +59,7 @@ header .control img {
   border-radius: 50%;
   border: 2px solid #fffbee;
 }
+
+button {
+  padding: 8px;
+}

@@ -24,3 +24,8 @@
   background-color: var(--backgrounddos);
   color: var(--text-primary);
 }
+
+button {
+  width: 50%;
+  height: 50%;
+}

@@ -25,13 +25,22 @@ const PetCard = ({ petuser }) => {
         <>
           <div className="buttonencuesta">
             <div>
-              <button onClick={() => setEncuesta("Thank you mate! 🥰")}>
+              <button
+                clasName="button-29"
+                onClick={() => setEncuesta("Thank you mate! 🥰")}
+              >
                 👍
               </button>
-              <button onClick={() => setEncuesta("I hate you! 🤬")}>👎</button>
+
+              <button
+                clasName="button-29"
+                onClick={() => setEncuesta("I hate you! 🤬")}
+              >
+                👎
+              </button>
             </div>
             <div>
-              <p>{Encuesta}</p>
+              <p>{Encuesta} </p>
             </div>
           </div>
         </>
