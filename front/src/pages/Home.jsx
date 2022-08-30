@@ -1,15 +1,27 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import "./Home.css";
 
-
 const Home = () => {
-    return (<section className="home">
+  return (
+    <section className="home">
+      <div className="home-img">
+        <img
+          src="https://wakyma.com/blog/wp-content/uploads/2016/12/viajar-con-mascotas-sin-estres.jpg"
+          alt="logo"
+        />
+      </div>
+      <div className="home-link">
         <h1>All aboard!</h1>
-        <img src="https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2021/03/931/523/iStock-1065666556.jpg?ve=1&tl=1" alt="logo" />
-        <p>Join us</p>
-        <Link to="/petregister">Register your pet!</Link>
-        <Link to="/login">Enter in your account</Link>
-    </section>)
-}
+        <h2>Join us</h2>
+        <p>
+          We are the most friendly company to travel with your pets. We organize
+          flights trips and all the services that are needed for your lovely
+          pet. Register wiht us and send your information about your trip and we
+          wil contact you.
+        </p>
+      </div>
+    </section>
+  );
+};
 
-export default Home
+export default Home;

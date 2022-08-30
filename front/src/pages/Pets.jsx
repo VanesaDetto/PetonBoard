@@ -28,7 +28,7 @@ const Pets = () => {
 
   return (
     <section className="pets">
-      <h2>Our pets</h2>
+      <h2>Our Friends</h2>
       <SearchBar setFilterWord={setFilterWord} />
       <div className="galeria">
         {allPets.length ? (

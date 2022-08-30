@@ -1,20 +1,26 @@
-.pets{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--backgrounddos);
-    color: var(--text-primary);
+.pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.pets .galeria{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    background-color: var(--backgrounddos);
-    color: var(--text-primary);
+.pets h2 {
+  margin-top: 20px;
+  color: #ff6892;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.pets .galeria {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.petcard {
+  background-color: var(--backgrounddos);
+  color: var(--text-primary);
+}

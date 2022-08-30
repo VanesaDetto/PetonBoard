@@ -21,11 +21,8 @@ const Login = () => {
         navigate("/");
         Swal.fire("Bienvenido a la web, ya puedes crear y editar tu mascota");
       }
-      
     });
   };
-
-  
 
   return (
     <section className="login">

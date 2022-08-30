@@ -18,8 +18,6 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text-primary);
 }
 section {
   min-height: 75vh;
@@ -36,13 +34,6 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-a:hover {
-  color: #fe4107;
-  padding: 2px 0;
-  border-top: 2px solid #fe4107;
-  border-bottom: 2px solid #fe4107;
-}
-
 strong {
   color: #fe4107;
 }
@@ -57,30 +48,46 @@ button {
   color: #fffbee;
 }
 
-
 .mode {
-  background-color: var(--background);
-
-  padding: 6px;
+  background-color: var(--backgroundTres);
   width: 100%;
-  border-top: #8855a1 solid 1px;
-  border-bottom: #8855a1 solid 1px;
-} 
-
-
-[data-theme='☀️'] {
-  --background: #0e1729;
-  --backgrounddos: #2a3f69;
-  --backgroundtres: #8855a1;
-  --text-primary: #c28dba;
-  --text-secondary: #c28dba;
-  --accent: #8855a1;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  color: #2a3f69;
 }
 
+[data-theme="☀️"] {
+  --background: #38363d;
+  --backgrounddos: #c43d4c;
+  --backgroundTres: #93e5e1;
+  --text-primary: #faf0ea;
+}
 
-[data-theme='🌚'] {
-  --background: #e5e0e8;
-  --text-primary: #29327a;
-  --text-secondary: #29327a;
-  --accent: rgb(30, 87, 87);
+[data-theme="🌚"] {
+  --background: #0579ff;
+  --backgrounddos: #abd0fc;
+  --backgroundTres: #f6eddb;
+  --text-primary: #284591;
+}
+
+@media only screen and (max-width: 750px) {
+  .nav {
+    font-size: 12px;
+    gap: 1rem;
+  }
+  .control {
+    margin-right: 20px;
+  }
+  .home-link {
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    margin-left: 10px;
+  }
+  .home-link {
+    display: none;
+  }
 }

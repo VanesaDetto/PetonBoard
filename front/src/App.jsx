@@ -8,28 +8,26 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Petregister from "./pages/Petregister";
 import RequireAuth from "./components/RequiredAuth";
-import useLocalStorage from 'use-local-storage';
-import './App.css';
-
-
+import useLocalStorage from "use-local-storage";
+import "./App.css";
 
 function App() {
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? '🌚' : '☀️');
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useLocalStorage("theme", defaultDark ? "🌚" : "☀️");
 
   const switchTheme = () => {
-  const newTheme = theme === '☀️' ? '🌚' : '☀️';
-  setTheme(newTheme);
-  }
+    const newTheme = theme === "☀️" ? "🌚" : "☀️";
+    setTheme(newTheme);
+  };
   return (
-    
     <JwtContextProvider>
-
       <div className="app" data-theme={theme}>
-      
         <Router>
+          <button className="mode" onClick={switchTheme}>
+            Mode {theme === "☀️" ? "🌚" : "☀️"}{" "}
+          </button>
           <Header />
-          <button className="mode" onClick={switchTheme}>Mode {theme === '☀️' ? '🌚' : '☀️'} </button>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pets" element={<Pets />} />
@@ -43,8 +41,7 @@ function App() {
             />
 
             <Route path="/login" element={<Login />} />
-            <Route path="/petregister" element={<Petregister />} 
-            />
+            <Route path="/petregister" element={<Petregister />} />
           </Routes>
 
           <Footer />

@@ -61,11 +61,11 @@ const Petregister = () => {
         />
         <label htmlFor="specie">Specie</label>
         <select {...register("specie")}>
-        <option value="">Select...</option>
-        <option value="cat">Cat</option>
-        <option value="dog">Dog</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="bird">Bird</option>
+          <option value="">Select...</option>
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+          <option value="rabbit">Rabbit</option>
+          <option value="bird">Bird</option>
         </select>
 
         <label htmlFor="breed">Breed</label>
@@ -95,15 +95,14 @@ const Petregister = () => {
           id=""
           {...register("date")}
         />
-        
+
         <label htmlFor="Services">Services</label>
         <select {...register("services")}>
-        <option value="">Select...</option>
-        <option value="hold">Hold</option>
-        <option value="cabin">Cabin</option>
+          <option value="">Select...</option>
+          <option value="hold">Hold</option>
+          <option value="cabin">Cabin</option>
         </select>
-         
-        
+
         <label htmlFor="avatar">Avatar</label>
         <input type="file" id="avatar" name="avatar" {...register("avatar")} />
 
